@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra Pro Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #fff; scroll-behavior: smooth; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Hero Section */
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: slideInDown 1s forwards;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      animation: slideInUp 1s forwards;
+      animation-delay: 0.5s;
+    }
+    header a.btn {
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 30px;
+      background: #fff;
+      color: #0f0f0f;
+      font-weight: 700;
+      transition: transform 0.3s;
+    }
+    header a.btn:hover { transform: scale(1.1); }
+
+    /* Sections */
+    section { padding: 80px 20px; text-align: center; }
+    section h2 { font-size: 2rem; margin-bottom: 40px; position: relative; display: inline-block; }
+    section h2::after { content: ""; display: block; width: 50px; height: 3px; background: #6a11cb; margin: 10px auto 0; border-radius: 2px; }
+
+    /* About */
+    #about p { max-width: 700px; margin: auto; line-height: 1.6; color: #ccc; }
+
+    /* Skills */
+    .skills { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+    .skill { background: #1f1f1f; padding: 20px; border-radius: 10px; width: 150px; transition: transform 0.3s, background 0.3s; }
+    .skill:hover { transform: translateY(-10px); background: #2575fc; }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .project { background: #1f1f1f; border-radius: 10px; overflow: hidden; transition: transform 0.3s; }
+    .project img { width: 100%; display: block; }
+    .project:hover { transform: scale(1.05); }
+
+    /* Contact */
+    form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+    input, textarea { padding: 12px; border-radius: 8px; border: none; outline: none; }
+    button { padding: 12px; border-radius: 30px; border: none; background: #6a11cb; color: #fff; font-weight: 700; cursor: pointer; transition: transform 0.3s; }
+    button:hover { transform: scale(1.05); }
+
+    /* Footer */
+    footer { padding: 30px; background: #111; text-align: center; color: #777; }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideInDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Hi, I'm Your Name</h1>
+    <p>I'm a Web Developer & Designer crafting modern, responsive websites.</p>
+    <a href="#about" class="btn">See My Work</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am passionate about building beautiful and functional websites. I specialize in creating responsive, fast, and interactive web experiences that engage users and elevate brands.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Node.js</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250" alt="Project 1">
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250" alt="Project 2">
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x250" alt="Project 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Your Name. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
